@@ -5,7 +5,7 @@ TEMP_DIR="temp_repos"
 mkdir -p "$TEMP_DIR"
 
 OUTPUT_FILE="libs.json"
-echo "[" > "$OUTPUT_FILE"
+echo "{" > "$OUTPUT_FILE"
 
 MATCHED_LIBRARIES=()
 
@@ -92,7 +92,7 @@ for REPO in "${REPOS[@]}"; do
 done
 
 echo "" >> "$OUTPUT_FILE"
-echo "]" >> "$OUTPUT_FILE"
+echo "}" >> "$OUTPUT_FILE"
 rm -rf "$TEMP_DIR"
 
 echo "✅ Search completed. Results saved to: $OUTPUT_FILE"
